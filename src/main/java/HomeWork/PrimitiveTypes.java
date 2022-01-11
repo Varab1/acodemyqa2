@@ -356,6 +356,46 @@ public class PrimitiveTypes {
         System.out.printf("%s%s\n", firstPart, secondPart);
         System.out.println("Hi, my name is Alexander" + "." + "I dream of working in IT");
 
+        // boolean example
+
+        int month = 1;
+        if (month == 1) {
+            System.out.println("January and it is Winter");
+        } else if (month == 2) {
+            System.out.println("February and it is Winter");
+        } else if (month == 3) {
+            System.out.println("March and it is Spring");
+        } else if (month == 4) {
+            System.out.println("April and it is Spring");
+        } else if (month == 5) {
+            System.out.println("May and it is Spring");
+        } else if (month == 6) {
+            System.out.println("June and it is Summer");
+        } else if (month == 7) {
+            System.out.println("July and it is Summer");
+        } else if (month == 8) {
+            System.out.println("August and it is Summer");
+        } else if (month == 9) {
+            System.out.println("September and it is Autumn");
+        } else if (month == 10) {
+            System.out.println("October and it is Autumn");
+        } else if (month == 11) {
+            System.out.println("November and it is Autumn");
+        } else if (month == 12) {
+            System.out.println("December and it is Winter");
+        } else {
+            System.out.println("Impossible");
+        }
+
+        int temperature = -5;
+        if (temperature > 26) {
+            System.out.println("Hot");
+        } else if (temperature < 10) {
+            System.out.println("Cold");
+        } else {
+            System.out.println("Heat");
+        }
+
 
     }
 }
