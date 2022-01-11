@@ -119,7 +119,7 @@ public class PrimitiveTypes {
         System.out.println(Byte.MIN_VALUE);
         System.out.println(Byte.MAX_VALUE);
 
-         //short example
+        //short example
 
         short freezingPointOfLiquidNitrogenInCelsius = -210;
         System.out.println(freezingPointOfLiquidNitrogenInCelsius);
@@ -231,7 +231,7 @@ public class PrimitiveTypes {
         System.out.println(Long.MIN_VALUE);
         System.out.println(Long.MAX_VALUE);
 
-       // char example
+        // char example
 
         char a1 = 243;
         System.out.println(a1);
@@ -254,7 +254,7 @@ public class PrimitiveTypes {
         char c1 = 74;
         char c2 = 65;
         char c3 = 86;
-        System.out.println(c1+""+c2+""+c3+""+c2);
+        System.out.println(c1 + "" + c2 + "" + c3 + "" + c2);
 
         char smile1 = '☺'; //alt+1
         char smile2 = '☻'; //alt+2
@@ -277,17 +277,17 @@ public class PrimitiveTypes {
 
         int a = 2;
         int b = 3;
-        int c = a+b;
+        int c = a + b;
         System.out.println(c);
 
-       int sumOfTwoNumber = 20 + 100;
+        int sumOfTwoNumber = 20 + 100;
         System.out.println(sumOfTwoNumber);
 
         //subtraction
 
-        int x =150;
+        int x = 150;
         int y = 120;
-        int z = x-y;
+        int z = x - y;
         System.out.println(z);
 
         int r = 100 - 50;
@@ -334,8 +334,8 @@ public class PrimitiveTypes {
         String myDaughtersName = "Maja";
         System.out.println(myDaughtersName);
 
-        String myWiveName = "Viktorija";
-        System.out.println(myWiveName);
+        String myWifeName = "Viktorija";
+        System.out.println(myWifeName);
 
         String myCountry = "Latvia";
         System.out.println(myCountry);
@@ -355,55 +355,6 @@ public class PrimitiveTypes {
 
         System.out.printf("%s%s\n", firstPart, secondPart);
         System.out.println("Hi, my name is Alexander" + "." + "I dream of working in IT");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
