@@ -31,8 +31,9 @@ public class HomeWork {
         //Array example
 
         int[] array = new int[10];
-        for (int c = 0; c < 12; c = c + 2) {
-            System.out.print(c + ", ");
+        for (int c = 0; c < 12; c++) {
+            if (c % 2 == 0)
+                System.out.print(c + ", ");
         }
         System.out.println();
 
@@ -76,57 +77,12 @@ public class HomeWork {
 
                 //multiplication table
 
-                // on 2
-                for (int c = 2; c < 22; c = c + 2) {
-                    System.out.print(c + " ");
-                }
-                System.out.println();
-
-                // on 3
-                for (int c = 3; c < 33; c = c + 3) {
-                    System.out.print(c + " ");
-                }
-                System.out.println();
-
-                // on 4
-                for (int c = 4; c < 44; c = c + 4) {
-                    System.out.print(c + " ");
-                }
-                System.out.println();
-
-                // on 5
-                for (int c = 5; c < 55; c = c + 5) {
-                    System.out.print(c + " ");
-                }
-                System.out.println();
-
-                //on 6
-                for (int c = 6; c < 66; c = c + 6) {
-                    System.out.print(c + " ");
-                }
-                System.out.println();
-
-                // on 7
-                for (int c = 7; c < 77; c = c + 7) {
-                    System.out.print(c + " ");
-                }
-                System.out.println();
-
-                // on 8
-                for (int c = 8; c < 88; c = c + 8) {
-                    System.out.print(c + " ");
-                }
-                System.out.println();
-
-                // on 9
-                for (int c = 9; c < 99; c = c + 9) {
-                    System.out.print(c + " ");
-                }
-                System.out.println();
-
-                // on 10
-                for (int c = 10; c < 110; c = c + 10) {
-                    System.out.print(c + " ");
+                for (int t = 1; t <= 10; t++) {
+                    for (int b = 1; b <= 10; b++) {
+                        int result = t * b;
+                        System.out.printf("%4d", result);
+                    }
+                    System.out.println();
                 }
 
 
