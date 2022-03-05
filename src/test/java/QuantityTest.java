@@ -8,38 +8,23 @@ import utils.LocalDriverManager;
 import utils.PropertiesReader;
 
 import static constans.Colors.BLUE;
-import static constans.Messages.COUPON_IS_APPLIED;
 import static constans.Products.HOODIE;
 
 
 @Slf4j
-
-public class CouponTest {
+public class QuantityTest {
 
     private final WebDriver driver = LocalDriverManager.getInstance();
     HeaderPage header = new HeaderPage();
     HomePage homePage = new HomePage();
     ProductPage productPage = new ProductPage();
-    CartButton cartButton = new CartButton();
     CartPage cartPage = new CartPage();
 
     @BeforeEach       // Инициализация теста.
     public void init() {
         log.info("Step 1: User open the Online shop page.");
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));// Не явное ожидание
         driver.get(PropertiesReader.getProperties().getProperty("home.page"));
-//        System.out.println();
     }
-
-//    @Test
-//    public void testIfProductInTheCart() {
-//
-//        log.info("Step 2: User select any product on the main page by clicking on Add to card under the product.");
-//        homePage.addToCartSpecificProduct(BELT);
-//        log.info("Step 3: User clicks on the Card logo on top of the screen");
-//        driver.findElement(By.id("site-header-cart")).click();
-//        log.info("Step 4: User see product in the cart.");
-//    }
 
     @Test
     public void applyCouponCode() {
@@ -58,24 +43,11 @@ public class CouponTest {
         log.info("Step 6: User click cart Button");
         productPage.viewCartButton();
 
-        log.info("Step 7: User enter code");
-        cartPage.enterCoupon("easy_discount");
+        log.info("Step 7: User changes the quantity of a product in the cart");
+        cartPage.checkQuantity(5);
 
-        log.info("Step 8: User apply Coupon");
-        cartPage.applyCoupon();
-
-        log.info("Step 9: User sees the message - Coupon code applied successfully ");
-        cartPage.checkSuccessMessage(COUPON_IS_APPLIED);
-
-        log.info("Step 10:User enter second code");
-        cartPage.enterCoupon("additional_discount");
-
-        log.info("Step 11: User apply second Coupon");
-        cartPage.applyCoupon();
-
-        log.info("Step 12: User sees the message - Coupon code applied successfully");
-        cartPage.checkSuccessMessage(COUPON_IS_APPLIED);
-
+        log.info("Step 8: User clicks button UpdateCart");
+        cartPage.updateCart();
     }
 
     @AfterEach
