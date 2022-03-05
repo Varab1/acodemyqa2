@@ -26,20 +26,8 @@ public class CouponTest {
     @BeforeEach       // Инициализация теста.
     public void init() {
         log.info("Step 1: User open the Online shop page.");
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));// Не явное ожидание
         driver.get(PropertiesReader.getProperties().getProperty("home.page"));
-//        System.out.println();
     }
-
-//    @Test
-//    public void testIfProductInTheCart() {
-//
-//        log.info("Step 2: User select any product on the main page by clicking on Add to card under the product.");
-//        homePage.addToCartSpecificProduct(BELT);
-//        log.info("Step 3: User clicks on the Card logo on top of the screen");
-//        driver.findElement(By.id("site-header-cart")).click();
-//        log.info("Step 4: User see product in the cart.");
-//    }
 
     @Test
     public void applyCouponCode() {
