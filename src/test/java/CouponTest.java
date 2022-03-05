@@ -23,7 +23,7 @@ public class CouponTest {
     CartButton cartButton = new CartButton();
     CartPage cartPage = new CartPage();
 
-    @BeforeEach       // Инициализация теста.
+    @BeforeEach
     public void init() {
         log.info("Step 1: User open the Online shop page.");
         driver.get(PropertiesReader.getProperties().getProperty("home.page"));
