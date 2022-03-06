@@ -51,19 +51,20 @@ public class CouponTest {
 
         log.info("Step 8: User apply Coupon");
         cartPage.applyCoupon();
-
-        log.info("Step 9: User sees the message - Coupon code applied successfully ");
         cartPage.checkSuccessMessage(COUPON_IS_APPLIED);
 
-        log.info("Step 10:User enter second code");
+        log.info("Step 9:User enter second code");
         cartPage.enterCoupon("additional_discount");
 
-        log.info("Step 11: User apply second Coupon");
+        log.info("Step 10: User apply second Coupon");
         cartPage.applyCoupon();
-
-        log.info("Step 12: User sees the message - Coupon code applied successfully");
         cartPage.checkSuccessMessage(COUPON_IS_APPLIED);
 
+        log.info("Step 11: User is using wrong coupon");
+        cartPage.enterCoupon("123");
+
+        log.info("Step 12: User sees - Coupon has been removed ");
+        cartPage.removeCouponWithJs();
     }
 
     @AfterEach
